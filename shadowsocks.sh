@@ -1,14 +1,15 @@
 #! /bin/bash
 PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
 export PATH
-#=================================================================#
-#   System Required:  CentOS 6+, Debian 7+, Ubuntu 12+            #
-#   Description: One click Install Shadowsocks-Python server      #
-#   Author: Lincoln <lincoln@howabout.tk>                         #
-#   Thanks: @clowwindy <https://twitter.com/clowwindy>            #
-#           Teddysun <i@teddysun.com>                             #
-#   Intro:  http://howabout.tk                                    #
-#=================================================================#
+#========================================================================#
+#   This script is copied from @Teddysun, for personal study purpose.    #   
+#   System Required:  CentOS 6+, Debian 7+, Ubuntu 12+                   #
+#   Description: One click Install Shadowsocks-Python server             #
+#   Author: Lincoln <lincoln@howabout.tk>                                #
+#   Thanks: @clowwindy <https://twitter.com/clowwindy>                   #
+#           Teddysun <i@teddysun.com>                                    #
+#   Intro:  http://howabout.tk                                           #
+#========================================================================#
 
 clear
 echo
