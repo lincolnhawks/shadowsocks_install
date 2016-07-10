@@ -4,18 +4,20 @@ export PATH
 #=================================================================#
 #   System Required:  CentOS 6+, Debian 7+, Ubuntu 12+            #
 #   Description: One click Install Shadowsocks-Python server      #
-#   Author: Teddysun <i@teddysun.com>                             #
+#   Author: Lincoln <lincoln@howabout.tk>                         #
 #   Thanks: @clowwindy <https://twitter.com/clowwindy>            #
-#   Intro:  https://teddysun.com/342.html                         #
+#           Teddysun <i@teddysun.com>                             #
+#   Intro:  http://howabout.tk                                    #
 #=================================================================#
 
 clear
 echo
 echo "#############################################################"
-echo "# One click Install Shadowsocks-Python server               #"
-echo "# Intro: https://teddysun.com/342.html                      #"
-echo "# Author: Teddysun <i@teddysun.com>                         #"
-echo "# Thanks: @clowwindy <https://twitter.com/clowwindy>        #"
+echo "# One click Install Shadowsocks-Python server                #"
+echo "# Intro:  http://howabout.tk                                 #"
+echo "# Author: Lincoln <lincoln@howabout.tk>                      #"
+echo "# Thanks: @clowwindy <https://twitter.com/clowwindy>         #"
+echo "#         Teddysun <i@teddysun.com>                          #"
 echo "#############################################################"
 echo
 
@@ -79,8 +81,8 @@ function pre_install(){
     fi
     # Set shadowsocks config password
     echo "Please input password for shadowsocks-python:"
-    read -p "(Default password: teddysun.com):" shadowsockspwd
-    [ -z "$shadowsockspwd" ] && shadowsockspwd="teddysun.com"
+    read -p "(Default password: howabout.tk):" shadowsockspwd
+    [ -z "$shadowsockspwd" ] && shadowsockspwd="howabout.tk"
     echo
     echo "---------------------------"
     echo "password = $shadowsockspwd"
@@ -90,8 +92,8 @@ function pre_install(){
     while true
     do
     echo -e "Please input port for shadowsocks-python [1-65535]:"
-    read -p "(Default port: 8989):" shadowsocksport
-    [ -z "$shadowsocksport" ] && shadowsocksport="8989"
+    read -p "(Default port: 2521):" shadowsocksport
+    [ -z "$shadowsocksport" ] && shadowsocksport="2521"
     expr $shadowsocksport + 0 &>/dev/null
     if [ $? -eq 0 ]; then
         if [ $shadowsocksport -ge 1 ] && [ $shadowsocksport -le 65535 ]; then
@@ -250,7 +252,7 @@ function install_ss(){
             /etc/init.d/shadowsocks start
         else
             echo
-            echo "Shadowsocks install failed! Please visit https://teddysun.com/342.html and contact."
+            echo "Shadowsocks install failed! Please visit http:howabout.tk and contact."
             exit 1
         fi
         clear
@@ -263,13 +265,13 @@ function install_ss(){
         echo -e "Your Local Port: \033[41;37m 1080 \033[0m"
         echo -e "Your Encryption Method: \033[41;37m aes-256-cfb \033[0m"
         echo
-        echo "Welcome to visit:https://teddysun.com/342.html"
+        echo "Welcome to visit:http:howabout.tk"
         echo "Enjoy it!"
         echo
         exit 0
     else
         echo
-        echo "pip install failed! Please visit https://teddysun.com/342.html and contact."
+        echo "pip install failed! Please visit http://howabout.tk and contact."
         exit 1
     fi
 }
